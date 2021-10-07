@@ -31,9 +31,25 @@ app.get('/api/penguins', (req, res) =>{
     res.send("<h2>Emperor Penguin Facts</h2> <em>super cool facts about super cool birds</em><br>" + "<ol><li>" + penguinsFacts.join('</li><br><li>') + "</li></ol>");
 });
 
+//Bears page & display info
+//facts courtesy of onekindplanet.org and worldanimalprotection.us
+
+const bearFacts = [
+    "Bears are extraordinarily intelligent animals. They have far superior navigation skills to humans; excellent memories; large brain to body ratio; and use tools in various contexts from play to hunting.",
+    "Bears grieve deeply for others. Cubs are known to moan and cry when separated from their mothers.  This can go on for weeks if their mothers are killed by hunters.",
+    "Bears have excellent senses of smell, sight and hearing. They can smell food, cubs, a mate or predators from miles away. Their great eyesight allows them to detect when fruits are ripe.",
+    "Some species of Asiatic bear build nests in the trees. They can use these for hiding, eating and even sleeping.",
+    "Bears care deeply about family members. They will risk their lives and even fight to the death in order to save a cub or sibling from danger.",
+    "Bears were often honoured in the cultures of many early civilisations. They were seen as a symbol of power, strength and love.",
+    "Vikings and the Celts have many legends about the strength, protectiveness and prowess of bears.",
+    "The bear is a common national personification for Russia (and the former USSR) and Germany. The brown bear is Finland’s national animal.",
+    "Grizzly bears possess a biting force of over 1200 PSI, which is enough to crush a bowling ball or an iron skillet.",
+    "There are eight different species of bear: North American black bears, brown bears, polar bears, Asiatic black bears, Andean bears, panda bears, sloth bears, and sun bears."
+];
+
 app.get('/api/bears', (req, res) =>{
     //dummies abound
-    res.send("LES OURS");
+    res.send("<h2>Bear Facts</h2> <em>Facts about the fuzzy bois u should DEFINITELY NOT PET</em><br>" + "<ol><li>" + bearFacts.join('</li><br><li>') + "</li></ol>");
 });
 
 //get the app running by listening on port 8080
